@@ -238,36 +238,22 @@ void loop()
       if (Vol >= 1)
       {
         Vol = 0;
-        audio();
-        arrow();
-        displaydata();
-        }
-      else
-      {
-      audio();
-      arrow();
-      displaydata();
       }
-     }
+    }
     else
     {
       Vol = Vol - 1;
       if (Vol <= -50)
       {
         Vol = -50;
-        audio();
-        arrow();
-        displaydata();
-        }
-      else
-      {
-      audio();
-      arrow();
-      displaydata();
       }
-     }
-      TurnDetected = false;
-    }   
+    }
+
+    audio();
+    arrow();
+    displaydata();
+    TurnDetected = false;
+ }   
   
   if (TurnDetected &&  memoryMode == 1)
   {
